@@ -225,7 +225,6 @@
 .ser__orador{
     width: 50%;
     margin: 10px auto;
-    border: 1px solid black;
 }
 form label:first-child{
     display: block;
@@ -268,12 +267,21 @@ form input{
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    transition: all 2s ease 0s;
 }
 .orador__form button:hover{
-    background-color: #38BB3A;
-    transform: translate(5px);
+    animation: shake 2s ease 0s infinite;
 }
+
+@keyframes shake{
+    10%{
+        transform: translate(5px);
+    }
+    50%{
+        transform: translate(-5px);
+    }
+}
+
+
 
 
 /*----FOOTER----*/
