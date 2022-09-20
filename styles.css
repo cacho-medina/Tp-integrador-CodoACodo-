@@ -26,18 +26,6 @@
     padding: 0 5%;
 }
 
-.header a{
-    cursor: pointer;
-}
-
-.header a:visited{
-    color: lightgray;
-}
-
-.header a:active{
-    color: white;
-}
-
 .header__icon img{
     display: block;
     width: 150px;
@@ -63,11 +51,22 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    color: lightgray;
 }
 
-.green,
-.green a:visited{
+.header__nav_ul a{
+    color: lightgray;
+}
+
+.header__nav_ul a:hover{
+    color: white;
+}
+
+.green a{
     color: var(--green);
+}
+.green a:hover{
+    color: var(--green-metal);
 }
 
 /*----SECTION CONFERENCE----*/
@@ -224,30 +223,58 @@
 /*----SER ORADOR----*/
 
 .ser__orador{
-    height: 400px;
+    width: 50%;
+    margin: 10px auto;
+    border: 1px solid black;
+}
+form label:first-child{
+    display: block;
+    font-size: 0.8rem;
+    text-align: center;
+}
+form label:nth-child(2){
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    font-weight: 500;
+}
+form legend{
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 10px 0;
+}
+.orador__form legend span{
+    text-decoration: underline dotted black;
+}
+form textarea{
+    display: block;
+    margin: 10px auto;
+    width: 100%;
 }
 
-.orador__form{
-    text-align: center;
-    height: 100%;
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+form input{
+    width: 40%;
+    margin: auto;
+    display: inline-block;
 }
 
 .orador__form button{
+    display: block;
+    width: 100%;
     font-size: 1.1rem;
     background-color: #A3CB64;
     color: white;
     padding: 10px 0;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 2s ease 0s;
+}
+.orador__form button:hover{
+    background-color: #38BB3A;
+    transform: translate(5px);
 }
 
-.orador__form label{
-    text-align: left;
-}
 
 /*----FOOTER----*/
 

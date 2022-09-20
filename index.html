@@ -42,7 +42,9 @@
                     oradores de primer <br />
                     nivel que tenemos para ti. Te esperamos!
                 </p>
-                <a href="#" class="conf__wannabe">Quiero ser orador</a>
+                <a href="#ser_orador" class="conf__wannabe"
+                    >Quiero ser orador</a
+                >
                 <a href="#" class="conf__buy">Comprar tickets</a>
             </article>
         </section>
@@ -118,22 +120,30 @@
         </section>
         <section id="ser_orador" class="ser__orador">
             <form action="" class="orador__form">
-                <h3>CONVIERTETE EN</h3>
-                <h2>ORADOR</h2>
-                <p>
+                <label>CONVIÉRTETE EN UN</label>
+                <label>ORADOR</label>
+                <legend>
                     Anótate como orador para dar una
-                    <a href="#">charla ignite</a>. Cuéntanos de que quieres
-                    hablar!
-                </p>
-                <input type="text" name="" id="" placeholder="Nombre" />
-                <input type="text" name="" id="" placeholder="Apellido" />
+                    <span>charla ignite</span>. Cuéntanos de que quieres hablar!
+                </legend>
                 <input
                     type="text"
-                    name=""
-                    id=""
-                    placeholder="Sobre qué quieres hablar?"
+                    name="name"
+                    id="nombre"
+                    placeholder="Nombre"
                 />
-                <label for="">Recuerda incluir un titulo para tu charla</label>
+                <input
+                    type="text"
+                    name="surname"
+                    id="apellido"
+                    placeholder="Apellido"
+                />
+                <textarea
+                    cols="40"
+                    rows="10"
+                    placeholder="Sobre qué quieres hablar?"
+                ></textarea>
+                <label>Recuerda incluir un titulo para tu charla</label>
                 <button type="submit">Enviar</button>
             </form>
         </section>
