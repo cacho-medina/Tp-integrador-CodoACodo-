@@ -1,0 +1,86 @@
+/*-------------------------HEADER----------------------------*/
+.navbar__title {
+    font-size: 2rem;
+}
+/*-------------------------OPTION CARDS----------------------------*/
+.menu__options {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    height: 250px;
+    gap: 10px;
+}
+.option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 16%;
+    text-align: center;
+}
+.estudiante {
+    border: 1px solid blue;
+}
+.trainee {
+    border: 1px solid green;
+}
+.junior {
+    border: 1px solid orange;
+}
+/*-------------------------BUY FORM----------------------------*/
+.venta {
+    padding: 20px 0;
+}
+.center {
+    text-align: center;
+}
+.form__venta {
+    width: 60%;
+    margin: auto;
+}
+#show__prize {
+    background-color: lightblue;
+    color: darkblue;
+    padding: 10px 20px;
+    margin: 25px 0;
+    font-size: 1.1rem;
+}
+.form__button {
+    background-color: #a3cb64;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.form__button:hover {
+    animation: shake 2s ease 0s infinite;
+    background-color: #91b359;
+}
+
+@keyframes shake {
+    10% {
+        transform: translate(5px);
+    }
+    50% {
+        transform: translate(-5px);
+    }
+}
+/*-------------------------FOOTER----------------------------*/
+.footer {
+    background: rgb(37, 54, 88);
+    background: linear-gradient(
+        90deg,
+        rgba(37, 54, 88, 1) 0%,
+        rgba(74, 153, 166, 1) 100%
+    );
+    font-size: 0.9rem;
+    padding: 20px 0;
+}
+.footer__link:visited {
+    color: white;
+}
+
+.footer__link:hover {
+    color: blue;
+}

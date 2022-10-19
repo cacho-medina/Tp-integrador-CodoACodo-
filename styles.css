@@ -23,7 +23,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5%;
 }
 
 .header__icon img {
@@ -285,7 +284,6 @@ form legend {
     color: #bbb;
     font-size: 0.7rem;
 }
-
 .orador__form button {
     margin: 20px 0;
     display: block;
@@ -300,6 +298,7 @@ form legend {
 }
 .orador__form button:hover {
     animation: shake 2s ease 0s infinite;
+    background-color: #91b359;
 }
 
 @keyframes shake {
