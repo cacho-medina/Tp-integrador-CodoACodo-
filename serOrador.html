@@ -73,6 +73,7 @@
                 <form class="row g-3 form__venta">
                     <div class="col">
                         <input
+                            id="name"
                             type="text"
                             class="form-control"
                             placeholder="Nombre"
@@ -81,6 +82,7 @@
                     </div>
                     <div class="col">
                         <input
+                            id="surname"
                             type="text"
                             class="form-control"
                             placeholder="Apellido"
@@ -89,6 +91,7 @@
                     </div>
                     <div class="col-12">
                         <input
+                            id="email"
                             type="email"
                             class="form-control"
                             id="inputEmail4"
@@ -100,6 +103,7 @@
                             Cantidad
                         </label>
                         <input
+                            id="cantidad"
                             type="number"
                             class="form-control"
                             id="inputCantidad"
@@ -110,8 +114,8 @@
                         <label for="categoria" class="form-label">
                             Categoria
                         </label>
-                        <select name="" class="form-select">
-                            <option selected>...</option>
+                        <select id="categoria" class="form-select">
+                            <option selected value="">...</option>
                             <option value="Estudiante">Estudiante</option>
                             <option value="Trainee">Trainee</option>
                             <option value="Junior">Junior</option>
@@ -127,10 +131,18 @@
                             readonly
                         />
                     </div>
-                    <button type="button" class="col form__button">
+                    <button
+                        type="button"
+                        class="col form__button"
+                        onclick="borrarTicket()"
+                    >
                         Borrar
                     </button>
-                    <button type="button" class="col form__button">
+                    <button
+                        type="button"
+                        class="col form__button"
+                        onclick="crearTicket()"
+                    >
                         Resumen
                     </button>
                 </form>
@@ -165,5 +177,6 @@
                 </li>
             </ul>
         </footer>
+        <script src="index.js"></script>
     </body>
 </html>
