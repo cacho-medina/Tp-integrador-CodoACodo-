@@ -1,44 +1,38 @@
+/*
 function Ticket(name, surname, email, cantidad, categoria) {
     this.name = name;
     this.surname = surname;
     this.email = email;
     this.cantidad = cantidad;
     this.categoria = categoria;
-    this.mostrar = function () {
-        console.log(
-            ` nombre: ${this.name}\n apellido: ${this.surname}\n email: ${this.email}\n cantidad: ${this.cantidad}\n categoria: ${this.categoria}`
-        );
-    };
 }
+*/
 
 let nombre = document.getElementById("name");
 let apellido = document.getElementById("surname");
 let email = document.getElementById("email");
 let cantidad = document.getElementById("cantidad");
 let categoria = document.getElementById("categoria");
+const BD = [];
 
 function crearTicket() {
-    const BD = [];
-    //let nombre = document.getElementById("name");
-    //let apellido = document.getElementById("surname");
-    //let email = document.getElementById("email");
-    //let cantidad = document.getElementById("cantidad");
-    //let categoria = document.getElementById("categoria");
-    //ARREGLAR - guarda todos los objetos con el mismo nombre
-    const Cacho = new Ticket(
-        nombre.value,
-        apellido.value,
-        email.value,
-        cantidad.value,
-        categoria.value
-    );
-    //ARREGLAR - no muestra el array sino el objeto en si
-    BD.push(Cacho);
-    Cacho.mostrar();
+
+    BD.push({
+        name: nombre.value,
+        surname: apellido.value,
+        email: email.value,
+        cantidad: cantidad.value,
+        categoria: categoria.value
+    });
 
     let importe = calcularPrecio(cantidad.value);
     mostrarImporte(importe);
-    alert("TICKET GENERADO");
+    Swal.fire({
+        icon: "success",
+        title: "Ticket generado",
+        showConfirmButton: false,
+        timer: 1500
+    })
 }
 
 function calcularPrecio(cant) {
@@ -60,8 +54,13 @@ function mostrarImporte(dato) {
     salidaImporte.value = `Total a pagar: $ ${dato}`;
 }
 
-/*--------------------------------------------------------------------*/
-
 function borrarTicket() {
-    alert("DATOS BORRADOS");
+    let formulario = document.querySelector(".form__venta");
+    formulario.reset();
+    Swal.fire({
+        icon: "error",
+        title: "Datos eliminados",
+        showConfirmButton: false,
+        timer: 1500
+    })
 }
